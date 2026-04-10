@@ -1,14 +1,16 @@
+"use client";
+
 import React from "react";
-import {projects } from "@/Data/WorksData/WorksData";
+import { projects } from "@/Data/WorksData/WorksData";
 
 export default function Works() {
     return (
         <section id="works" className="container mx-auto px-4">
 
             {/* Title */}
-            <div className="text-center mb-14">
-                <h2 className="text-center mb-5 text-[#603F26] my-[5%] lg:my-[7%] font-bold text-4xl">
-                    My Projects
+            <div className='bg-[url(/TitleBG.webp)] bg-no-repeat bg-center bg-contain w-full h-[100px] my-[7%] flex items-center justify-center'>
+                <h2 className="text-4xl text-center font-bold text-[#603F26]">
+                    Works
                 </h2>
             </div>
 
@@ -18,46 +20,57 @@ export default function Works() {
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="relative group rounded-2xl overflow-hidden shadow-lg"
+                        className="shadow-lg bg-[#D2C4B4] pt-2 pb-10"
                     >
 
-                        {/* Image */}
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-full h-fit object-contain"
-                        />
+                        {/* Image wrapper */}
+                        <div className="relative overflow-hidden group touch-manipulation">
 
-                        {/* Overlay */}
-                        <div
-                            className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center
-              text-center px-4 opacity-0 group-hover:opacity-100 transition duration-500"
-                        >
-                            <h3 className="text-white text-xl font-bold mb-2">
-                                {project.title}
-                            </h3>
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-fit object-contain px-2"
+                            />
 
-                            <p className="text-gray-300 text-sm mb-4">
-                                {project.desc}
-                            </p>
+                            {/* Overlay */}
+                            <div
+                                className="
+                                    absolute inset-0 bg-black/70 flex flex-col justify-center items-center
+                                    text-center transition duration-500 mx-2
 
-                            {/* Buttons */}
-                            <div className="flex gap-3">
-                                {[
-                                    { name: "Live", link: project.live, style: "bg-[#F6FFDC] text-[#3C2A21]" },
-                                    { name: "GitHub", link: project.github, style: "border border-white text-white" },
-                                ].map((btn, i) => (
-                                    <a
-                                        key={i}
-                                        href={btn.link}
-                                        target="_blank"
-                                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition
-      ${btn.style} hover:bg-white hover:text-black`}
-                                    >
-                                        {btn.name}
-                                    </a>
-                                ))}
+                                    /* Desktop hover */
+                                    opacity-0 group-hover:opacity-100
+
+                                    /* Mobile fallback (always allow tap feel) */
+                                    active:opacity-100
+                                "
+                            >
+                                <h3 className="text-white text-xl font-bold mb-2">
+                                    {project.title}
+                                </h3>
+
+                                <p className="text-gray-300 text-sm mb-4">
+                                    {project.desc}
+                                </p>
+
+                                <div className="flex gap-3">
+                                    {[
+                                        { name: "Live", link: project.live, style: "bg-[#F6FFDC] text-[#3C2A21]" },
+                                        { name: "GitHub", link: project.github, style: "border border-white text-white" },
+                                    ].map((btn, i) => (
+                                        <a
+                                            key={i}
+                                            href={btn.link}
+                                            target="_blank"
+                                            className={`px-4 py-2 rounded-lg text-sm font-semibold transition
+                                            ${btn.style} hover:bg-white hover:text-black`}
+                                        >
+                                            {btn.name}
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 ))}

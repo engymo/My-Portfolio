@@ -3,7 +3,7 @@ export const NavbarLinks = [
     { name: "Skills", href: "#skills" },
     { name: "Works", href: "#works" },
     { name: "About", href: "#about" },
-    { name: "Contact Us", href: "#contactUs" },
+    { name: "Connect", href: "#Connect" },
 ]
 
 export const NavbarLinkMobile = [
@@ -11,5 +11,5 @@ export const NavbarLinkMobile = [
     { name: "Works", href: "#works" },
     { name: "Skills", href: "#skills" },
     { name: "About", href: "#about" },
-    { name: "Contact Us", href: "#contactUs" },
+    { name: "Connect", href: "#Connect" },
 ]

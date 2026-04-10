@@ -1,8 +1,10 @@
 "use client";
-
+import React from "react";
 import Link from "next/link";
 import Hero from "../3-Hero/Hero";
 import { useState, useEffect } from "react";
+import { ButtonsSectionData } from "@/Data/HeaderData/HeaderData";
+
 
 // Texts for the rotating subtitle
 
@@ -19,8 +21,8 @@ export default function Header() {
 
 
     return (
-        <header className=" min-h-screen container mx-auto px-4 flex flex-col 
-              lg:flex-row mt-20 lg:mt-10">
+        <header className=" min-h-[200px] container mx-auto px-4 flex flex-col 
+              lg:flex-row mt-20 lg:mt-15">
 
             <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
 
@@ -67,18 +69,15 @@ export default function Header() {
                     {/* Buttons */}
 
                     <div className="mt-5 flex flex-wrap gap-4 text-[#603F26] font-bold">
-                        <Link href="#skills" className="bg-[#A79277] text-white px-4 py-2 rounded-xl shadow-lg hover:bg-[#A79277]/80 transition">
-                            Skills
-                        </Link>
-                        <Link href="#works" className="bg-[#A79277] text-white px-4 py-2 rounded-xl shadow-lg hover:bg-[#A79277]/80 transition">
-                            Works
-                        </Link>
-                        <Link href="#about" className="bg-[#A79277] text-white px-4 py-2 rounded-xl shadow-lg hover:bg-[#A79277]/80 transition">
-                            About
-                        </Link>
-                        <Link href="#contact" className="bg-[#A79277] text-white px-4 py-2 rounded-xl shadow-lg hover:bg-[#A79277]/80 transition">
-                            Contact
-                        </Link>
+                        {ButtonsSectionData.map((btn) => (
+                            <Link
+                                key={btn.id}
+                                href={btn.link}
+                                className="bg-[#A79277] text-white px-4 py-2 rounded-xl shadow-lg hover:bg-[#A79277]/80 transition"
+                            >
+                                {btn.name}
+                            </Link>
+                        ))}
                     </div>
 
                     {/* Social Links*/}

@@ -7,10 +7,14 @@ const About = () => {
         <>
             <section id="about" className=" container mx-auto px-4">
 
-                <h2 className="text-center mb-5 text-[#603F26] my-[5%] lg:my-[10%] font-bold text-4xl">What I Do</h2>
+                <div className='bg-[url(/TitleBG.webp)] bg-no-repeat bg-center
+             bg-contain w-full h-[100px] my-[7%] lg:my-0 lg:my-[5%] flex items-center justify-center'>
+                    <h2 className="text-4xl text-center font-bold text-[#603F26] ">About</h2>
+                </div>
+                
                 {CardWork.map((work, index) => (
                     <div
-                        className="mb-5 shadow-lg max-w-xl bg-[#9F8383] hover:shadow-sm rounded-xl p-5"
+                        className="mb-5 shadow-lg max-w-xl bg-[#D2C4B4] hover:shadow-sm rounded-xl p-5"
                         style={{
                             marginLeft: index % 2 === 0 ? "auto" : "0",
                             marginRight: index % 2 !== 0 ? "auto" : "0",
@@ -20,8 +24,8 @@ const About = () => {
                         <div className="flex items-center gap-2">
                             <img src={work.image} className=" rounded-lg w-[20%] h-[20%]" alt={work.title} />
                             <div>
-                                <h5 className="text-white font-bold">{work.title}</h5>
-                                <p className="text-sm text-white/70">{work.description}</p>
+                                <h5 className="text-[#603F26] font-bold">{work.title}</h5>
+                                <p className="text-sm text-[#603F26]/70">{work.description}</p>
                             </div>
                         </div>
                     </div>
