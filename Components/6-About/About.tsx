@@ -2,6 +2,7 @@ import React from 'react'
 import { CardWork } from '@/Data/AboutData/AboutData';
 
 
+
 const About = () => {
     return (
         <>
@@ -14,7 +15,7 @@ const About = () => {
                 
                 {CardWork.map((work, index) => (
                     <div
-                        className="mb-5 shadow-lg max-w-xl bg-[#D2C4B4] hover:shadow-sm rounded-xl p-5"
+                        className="mb-5 shadow-lg max-w-xl bg-white/40 backdrop-blur-md hover:shadow-sm rounded-xl p-5"
                         style={{
                             marginLeft: index % 2 === 0 ? "auto" : "0",
                             marginRight: index % 2 !== 0 ? "auto" : "0",

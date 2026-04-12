@@ -22,6 +22,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Engy Mohamed | Frontend Developer",
   description: "Frontend Developer specialized in React & Next.js",
+   icons: {
+    icon: "/favicon.png", 
+  },
 };
 
 // Layout

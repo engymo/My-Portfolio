@@ -11,6 +11,7 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [activeLink, setActiveLink] = useState("");
 
     return (
         <>
@@ -33,7 +34,12 @@ export default function Navbar() {
                     {/* Links (Desktop) */}
                     <div className="hidden md:flex md:items-center gap-6 font-bold text-[#3C2A21]">
                         {NavbarLinks.map((link, index) => (
-                            <Link key={index} href={link.href}>
+                            <Link
+                                key={index}
+                                href={link.href}
+                                className={activeLink === link.name ? "text-[#F6FFDC] border-b-3 border-[#F6FFDC] rounded-md" : ""}
+                                onClick={() => setActiveLink(link.name)}
+                            >
                                 {link.name}
                             </Link>
                         ))}
