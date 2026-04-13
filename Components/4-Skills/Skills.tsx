@@ -3,6 +3,7 @@ import { imgs } from '@/Data/SkillsData/SkillsData'
 
 
 const Skills = () => {
+
     return (
 
         <section className='container mx-auto px-4 ' id='skills'>

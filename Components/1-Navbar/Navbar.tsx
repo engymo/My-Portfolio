@@ -8,8 +8,7 @@ import { BiCode } from "react-icons/bi";
 import { NavbarLinkMobile, NavbarLinks } from "@/Data/Navbar/NavbarLinks";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 
-
-export default function Navbar() {
+export default function Navbar () {
     const [open, setOpen] = useState(false);
     const [activeLink, setActiveLink] = useState("");
 
@@ -37,7 +36,7 @@ export default function Navbar() {
                             <Link
                                 key={index}
                                 href={link.href}
-                                className={activeLink === link.name ? "text-[#F6FFDC] border-b-3 border-[#F6FFDC] rounded-md" : ""}
+                                className={activeLink === link.name ? "text-[#F6FFDC] border-b-2 border-[#F6FFDC] rounded-sm" : ""}
                                 onClick={() => setActiveLink(link.name)}
                             >
                                 {link.name}

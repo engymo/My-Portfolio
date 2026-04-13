@@ -48,5 +48,13 @@ export const projects = [
         live: "https://engymo.github.io/FormTest/",
         github: "https://github.com/engymo/FormTest.git",
     },
+      {
+        id: 7,
+        title: "E-Learning Platform",
+        image: "/Works/E-Learn.png",
+        desc: "React.js + Tailwind + API + Payment System",
+        live: "https://learn-app-five-eta.vercel.app/",
+        github: "https://github.com/engymo/learn-app.git",
+    },
 ];
 

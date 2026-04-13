@@ -1,16 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { GiClick } from "react-icons/gi";
+import { project } from "@/Config/Config";
 
 interface ProjectProps {
-  project: {
-    id: number;
-    title: string;
-    image: string;
-    desc: string;
-    live: string;
-    github: string;
-  };
+  project: project;
+  
 }
 
 export const Card = ({ project }: ProjectProps) => {
@@ -28,15 +24,18 @@ export const Card = ({ project }: ProjectProps) => {
           }`}
       >
         {/* front*/}
-        <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] 
+        <div className="w-full h-full [backface-visibility:hidden] 
         shadow-lg rounded-xl overflow-hidden bg-[url(/Works/CardFront.webp)] bg-no-repeat bg-center bg-cover">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain p-2 rounded-2xl"
+            className="w-full h-full object-contain p-2 rounded-2xl "
           />
+          <span className="text-yellow-700 absolute bottom-2 right-2"><GiClick size={25} /></span>
 
         </div>
+
+
 
         {/* back*/}
         <div className="absolute inset-0 w-full h-full bg-[url(/Works/CardBack.webp)] bg-no-repeat bg-center bg-cover

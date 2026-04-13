@@ -9,7 +9,7 @@ import Connect from "@/Components/7-Connect/Connect";
 export default function Home() {
   return (
     <div>
-      <main className="" >
+      <main >
         <Header />
         <Skills />
         <About />
