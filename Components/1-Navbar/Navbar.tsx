@@ -45,7 +45,7 @@ export default function Navbar() {
                         ))}
                         {/* Download CV */}
                         <a
-                            href="/cv.pdf"
+                            href="/CV.Eng-Angie-Frontend.pdf"
                             download
                             className="flex items-center gap-1"
                         >
