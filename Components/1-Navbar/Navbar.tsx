@@ -92,7 +92,7 @@ export default function Navbar () {
                         </li>
                     ))}
                     <a
-                        href="/cv.pdf"
+                        href="/CV.Eng-Angie-Frontend.pdf"
                         download
                         className="flex items-center justify-center gap-1 bg-[#F6FFDC] text-[#3C2A21] rounded-2xl w-[250px] text-center py-2 font-bold
                              hover:bg-[#FFF8EC] transition-colors duration-500"

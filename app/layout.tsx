@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/1-Navbar/Navbar";
 import Footer from "@/Components/8-Footer/Footer";
-
-
 // Fonts
 
 const geistSans = Geist({
@@ -22,8 +21,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Engy Mohamed | Frontend Developer",
   description: "Frontend Developer specialized in React & Next.js",
-   icons: {
-    icon: "/favicon.png", 
+  icons: {
+    icon: "/favicon.png",
   },
 };
 
@@ -49,6 +48,8 @@ export default function RootLayout({
         </main>
         {/* Footer */}
         <Footer />
+        <Toaster toastOptions={{ style: { fontSize: '12px', fontWeight: 'bold'} }} />
+
       </body>
     </html>
   );
